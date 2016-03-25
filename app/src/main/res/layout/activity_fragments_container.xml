@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/blue"
+    >
+
+    <LinearLayout
+        android:id="@+id/fragContainerLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        >
+
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/fragmentOne"
+            android:layout_weight="1"
+            android:name="com.example.gani.androidtraining.Fagment.FragmentOne">
+        </fragment>
+
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/fragmentTwo"
+            android:layout_weight="1"
+            android:name="com.example.gani.androidtraining.Fagment.FragmentTwo">
+        </fragment>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtViewClickHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click here , How to add and remove fragments in run time"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnClickMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+
+
+</RelativeLayout>

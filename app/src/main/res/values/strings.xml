@@ -7,5 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="Welcome">Welcome to android training !!!</string>
     <string name="title_activity_fragments_home">FragmentsHomeActivity</string>
+    <string name="title_activity_fragments_home_add_replace">FragmentsHomeAddReplaceActivity
+    </string>
 
 </resources>
