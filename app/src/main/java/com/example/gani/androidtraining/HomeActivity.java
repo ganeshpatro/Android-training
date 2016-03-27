@@ -17,6 +17,7 @@ import android.widget.CheckedTextView;
 import android.widget.ListView;
 
 import com.example.gani.androidtraining.Fagment.FragmentsHomeActivity;
+import com.example.gani.androidtraining.Service.ServiceDemoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +28,11 @@ public class HomeActivity extends AppCompatActivity {
 
     private final String ACTIVITY = "Activity";
     private String CUSTOM_LIST_VIEW = "Custom List View + Json Parsing + Pagination";
-    private final String FRAGMENTS = "Fragments Basic + Exxamples";
+    private final String FRAGMENTS = "Fragments Basic + Example";
+    private final String SERVICES = "Service";
+    private final String BROADCAST_RECIVER = "Broadcast receiver";
 
-    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS};
+    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER};
 
     private ListView listView;
 
@@ -66,6 +69,16 @@ public class HomeActivity extends AppCompatActivity {
                     case FRAGMENTS:
                         Intent newActivity = new Intent(HomeActivity.this, FragmentsHomeActivity.class);
                         startActivity(newActivity);
+                        break;
+
+                    case SERVICES:
+                        Intent newActivityService = new Intent(HomeActivity.this, ServiceDemoActivity.class);
+                        startActivity(newActivityService);
+                        break;
+
+                    case BROADCAST_RECIVER:
+                        Intent newActivityBroadCastService = new Intent(HomeActivity.this, ServiceDemoActivity.class);
+                        startActivity(newActivityService);
                         break;
                 }
             }

@@ -26,7 +26,13 @@
         <activity
             android:name=".Fagment.FragmentsHomeAddReplaceActivity"
             android:label="@string/title_activity_fragments_home_add_replace"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Service.ServiceDemoActivity" />
+        <activity android:name=".Service.ServiceDemoNextPageActivity" />
+
+        <service android:name=".Service.DemoAudioService" />
+
+        <activity android:name=".BroadCastReceivers.BroadCastReceiverActivity"></activity>
     </application>
 
 </manifest>
