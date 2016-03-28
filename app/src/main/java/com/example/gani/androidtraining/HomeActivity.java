@@ -15,8 +15,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.gani.androidtraining.BroadCastReceivers.BroadCastReceiverActivity;
 import com.example.gani.androidtraining.Fagment.FragmentsHomeActivity;
+import com.example.gani.androidtraining.IntentsDemo.IntentDemoActivity;
 import com.example.gani.androidtraining.Service.ServiceDemoActivity;
 
 import java.util.ArrayList;
@@ -26,13 +29,19 @@ import static android.R.layout.simple_list_item_1;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private final int REQUEST_CODE = 100;
+
     private final String ACTIVITY = "Activity";
     private String CUSTOM_LIST_VIEW = "Custom List View + Json Parsing + Pagination";
     private final String FRAGMENTS = "Fragments Basic + Example";
     private final String SERVICES = "Service";
     private final String BROADCAST_RECIVER = "Broadcast receiver";
+    private final String INTENTS = "Intents + Intent Filters";
 
-    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER};
+
+
+
+    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS};
 
     private ListView listView;
 
@@ -77,16 +86,32 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                     case BROADCAST_RECIVER:
-                        Intent newActivityBroadCastService = new Intent(HomeActivity.this, ServiceDemoActivity.class);
-                        startActivity(newActivityService);
+                        Intent newActivityBroadCastService = new Intent(HomeActivity.this, BroadCastReceiverActivity.class);
+                        startActivity(newActivityBroadCastService);
+                        break;
+
+                    case INTENTS:
+                        Intent newIntentDemo = new Intent(HomeActivity.this, IntentDemoActivity.class);
+                        newIntentDemo.putExtra("data","MyData");
+                        startActivityForResult(newIntentDemo,REQUEST_CODE);
                         break;
                 }
             }
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+            if (data.hasExtra("returnData")) {
+                Toast.makeText(this, data.getExtras().getString("returnData"),
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 
-//    @Override
+
+    //    @Override
 //    public void onBackPressed() {
 //        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 //        if (drawer.isDrawerOpen(GravityCompat.START)) {

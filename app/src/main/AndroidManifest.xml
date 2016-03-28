@@ -8,6 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         /* Main Activity */
         <activity
             android:name=".DasboardActivity"
@@ -19,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        /* Normal Activities */
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".Fagment.FragmentsHomeActivity"
@@ -29,10 +32,19 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Service.ServiceDemoActivity" />
         <activity android:name=".Service.ServiceDemoNextPageActivity" />
-
+        <activity android:name=".BroadCastReceivers.BroadCastReceiverActivity" />
+        /* Services and broadcast receivers */
         <service android:name=".Service.DemoAudioService" />
 
-        <activity android:name=".BroadCastReceivers.BroadCastReceiverActivity"></activity>
+        <receiver android:name=".BroadCastReceivers.MyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.gani.mybroadcast" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".IntentsDemo.IntentDemoActivity"></activity>
     </application>
 
 </manifest>
