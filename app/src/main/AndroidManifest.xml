@@ -44,7 +44,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".IntentsDemo.IntentDemoActivity"></activity>
+        <activity android:name=".IntentsDemo.IntentDemoActivity" />
+        <activity android:name=".CustomComponents.CustomCumponentsActivity"></activity>
     </application>
 
 </manifest>

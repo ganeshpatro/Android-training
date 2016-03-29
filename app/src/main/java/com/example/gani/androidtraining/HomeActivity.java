@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.gani.androidtraining.BroadCastReceivers.BroadCastReceiverActivity;
+import com.example.gani.androidtraining.CustomComponents.CustomCumponentsActivity;
 import com.example.gani.androidtraining.Fagment.FragmentsHomeActivity;
 import com.example.gani.androidtraining.IntentsDemo.IntentDemoActivity;
 import com.example.gani.androidtraining.Service.ServiceDemoActivity;
@@ -37,11 +38,13 @@ public class HomeActivity extends AppCompatActivity {
     private final String SERVICES = "Service";
     private final String BROADCAST_RECIVER = "Broadcast receiver";
     private final String INTENTS = "Intents + Intent Filters";
+    private final String STYLES_CUSTOM_COMPONENTS = "Styles + Custom components";
 
 
 
 
-    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS};
+
+    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS,STYLES_CUSTOM_COMPONENTS};
 
     private ListView listView;
 
@@ -95,6 +98,12 @@ public class HomeActivity extends AppCompatActivity {
                         newIntentDemo.putExtra("data","MyData");
                         startActivityForResult(newIntentDemo,REQUEST_CODE);
                         break;
+
+                    case STYLES_CUSTOM_COMPONENTS:
+                        Intent newIntentStyleCustomComponents = new Intent(HomeActivity.this,CustomCumponentsActivity.class);
+                        startActivity(newIntentStyleCustomComponents);
+                        break;
+
                 }
             }
         });

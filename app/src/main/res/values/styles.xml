@@ -6,6 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--<item name="capitalize">characters</item>-->
+        <!--<item name="android:typeface">monospace</item>-->
+        <!--&lt;!&ndash;<item name="android:shadowDx">1.2</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:shadowDy">1.2</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:shadowRadius">2</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:textColor">#494948</item>/>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<item name="android:gravity" >center</item>&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:layout_margin" >3dp</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:textSize" >5pt</item>&ndash;&gt;-->
+        <!--<item name="android:shadowColor" >#000000</item>-->
     </style>
 
     <style name="AppTheme.NoActionBar">
