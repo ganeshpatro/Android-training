@@ -21,6 +21,7 @@ import com.example.gani.androidtraining.BroadCastReceivers.BroadCastReceiverActi
 import com.example.gani.androidtraining.CustomComponents.CustomCumponentsActivity;
 import com.example.gani.androidtraining.Fagment.FragmentsHomeActivity;
 import com.example.gani.androidtraining.IntentsDemo.IntentDemoActivity;
+import com.example.gani.androidtraining.RecyclerView.RecyclerViewDemoActivity;
 import com.example.gani.androidtraining.Service.ServiceDemoActivity;
 
 import java.util.ArrayList;
@@ -39,12 +40,11 @@ public class HomeActivity extends AppCompatActivity {
     private final String BROADCAST_RECIVER = "Broadcast receiver";
     private final String INTENTS = "Intents + Intent Filters";
     private final String STYLES_CUSTOM_COMPONENTS = "Styles + Custom components";
+    private final String RECYCLER_VIEW = "Recycler View";
+    private final String CARD_VIEW = "Card View";
 
 
-
-
-
-    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS,STYLES_CUSTOM_COMPONENTS};
+    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS,STYLES_CUSTOM_COMPONENTS,RECYCLER_VIEW,CARD_VIEW};
 
     private ListView listView;
 
@@ -102,6 +102,11 @@ public class HomeActivity extends AppCompatActivity {
                     case STYLES_CUSTOM_COMPONENTS:
                         Intent newIntentStyleCustomComponents = new Intent(HomeActivity.this,CustomCumponentsActivity.class);
                         startActivity(newIntentStyleCustomComponents);
+                        break;
+
+                    case RECYCLER_VIEW:
+                        Intent newRecyclerViewIntent = new Intent(HomeActivity.this,RecyclerViewDemoActivity.class);
+                        startActivity(newRecyclerViewIntent);
                         break;
 
                 }
