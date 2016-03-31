@@ -7,6 +7,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.gani.androidtraining.Factories.MovieFactory;
 import com.example.gani.androidtraining.Protocols.APIResponseCallBack;
 
 import org.json.JSONArray;
@@ -43,7 +44,7 @@ public class MoviesAPI {
                                 " \n" +
                                 " \n");
                         //Call Success
-                        callBackLocal.onSuccessCompletion(response);
+                        callBackLocal.onSuccessCompletion(MovieFactory.getMovies(response));
                     }
                 }, new Response.ErrorListener() {
             @Override

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="12dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imageViewThumbanil"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="12dp" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageViewThumbanil"
+        android:layout_toRightOf="@+id/imageViewThumbanil"
+        android:text="Title of movie"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/imageViewThumbanil"
+        android:text="Rating 5.0"
+        android:textSize="@dimen/rating" />
+
+    <TextView
+        android:id="@+id/textViewGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewRating"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imageViewThumbanil"
+        android:text="Action, Thriller, Drama"
+        android:textColor="@color/genre"
+        android:textSize="@dimen/genre" />
+
+    <TextView
+        android:id="@+id/textViewYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:text="2016"
+        android:textColor="@color/genre"
+        android:textSize="@dimen/year"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
