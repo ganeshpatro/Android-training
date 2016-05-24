@@ -20,4 +20,11 @@
     <string name="service_bound_hint">Here i want to bound the existing playing serivice \n I want to control play and pause action from this screen</string>
 
 
+    <!--For Recycle and card view-->
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+
+
 </resources>

@@ -23,6 +23,7 @@ import com.example.gani.androidtraining.Fagment.FragmentsHomeActivity;
 import com.example.gani.androidtraining.IntentsDemo.IntentDemoActivity;
 import com.example.gani.androidtraining.RecyclerView.RecyclerViewDemoActivity;
 import com.example.gani.androidtraining.Service.ServiceDemoActivity;
+import com.example.gani.androidtraining.activities.CardViewListActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,6 +108,11 @@ public class HomeActivity extends AppCompatActivity {
                     case RECYCLER_VIEW:
                         Intent newRecyclerViewIntent = new Intent(HomeActivity.this,RecyclerViewDemoActivity.class);
                         startActivity(newRecyclerViewIntent);
+                        break;
+
+                    case CARD_VIEW:
+                        Intent newCardViewIntent = new Intent(HomeActivity.this,CardViewListActivity.class);
+                        startActivity(newCardViewIntent);
                         break;
 
                 }
