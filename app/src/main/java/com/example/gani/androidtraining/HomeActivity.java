@@ -24,6 +24,7 @@ import com.example.gani.androidtraining.IntentsDemo.IntentDemoActivity;
 import com.example.gani.androidtraining.RecyclerView.RecyclerViewDemoActivity;
 import com.example.gani.androidtraining.Service.ServiceDemoActivity;
 import com.example.gani.androidtraining.activities.CardViewListActivity;
+import com.example.gani.androidtraining.activities.ReadXLSActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +44,11 @@ public class HomeActivity extends AppCompatActivity {
     private final String STYLES_CUSTOM_COMPONENTS = "Styles + Custom components";
     private final String RECYCLER_VIEW = "Recycler View";
     private final String CARD_VIEW = "Card View";
+    private final String READ_DATA_XLSX = "Read Data From XLSX";
 
 
-    private final String[] arrChapters = {ACTIVITY,CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS,STYLES_CUSTOM_COMPONENTS,RECYCLER_VIEW,CARD_VIEW};
+
+    private final String[] arrChapters = {CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS,STYLES_CUSTOM_COMPONENTS,RECYCLER_VIEW,CARD_VIEW,READ_DATA_XLSX};
 
     private ListView listView;
 
@@ -115,6 +118,10 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(newCardViewIntent);
                         break;
 
+                    case READ_DATA_XLSX:
+                        Intent newReadDataFromXLSX = new Intent(HomeActivity.this,ReadXLSActivity.class);
+                        startActivity(newReadDataFromXLSX);
+                        break;
                 }
             }
         });
