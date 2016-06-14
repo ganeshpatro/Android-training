@@ -58,7 +58,7 @@
         <activity android:name=".RecyclerView.RecyclerViewDemoActivity" />
         <activity android:name=".activities.CardViewListActivity" />
         <activity android:name=".activities.ReadXLSActivity" />
-
+        <activity android:name=".activities.BackgroundProcessActivity"></activity>
     </application>
 
 </manifest>

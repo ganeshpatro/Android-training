@@ -23,6 +23,7 @@ import com.example.gani.androidtraining.Fagment.FragmentsHomeActivity;
 import com.example.gani.androidtraining.IntentsDemo.IntentDemoActivity;
 import com.example.gani.androidtraining.RecyclerView.RecyclerViewDemoActivity;
 import com.example.gani.androidtraining.Service.ServiceDemoActivity;
+import com.example.gani.androidtraining.activities.BackgroundProcessActivity;
 import com.example.gani.androidtraining.activities.CardViewListActivity;
 import com.example.gani.androidtraining.activities.ReadXLSActivity;
 
@@ -45,10 +46,10 @@ public class HomeActivity extends AppCompatActivity {
     private final String RECYCLER_VIEW = "Recycler View";
     private final String CARD_VIEW = "Card View";
     private final String READ_DATA_XLSX = "Read Data From XLSX";
+    private final String BACKGROUND_THREAD_IMAGE_DOWNLOADING = "Background Thread + Image Downlaoding";
 
 
-
-    private final String[] arrChapters = {CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS,STYLES_CUSTOM_COMPONENTS,RECYCLER_VIEW,CARD_VIEW,READ_DATA_XLSX};
+    private final String[] arrChapters = {CUSTOM_LIST_VIEW,FRAGMENTS,SERVICES,BROADCAST_RECIVER,INTENTS,STYLES_CUSTOM_COMPONENTS,RECYCLER_VIEW,CARD_VIEW,READ_DATA_XLSX,BACKGROUND_THREAD_IMAGE_DOWNLOADING};
 
     private ListView listView;
 
@@ -121,6 +122,11 @@ public class HomeActivity extends AppCompatActivity {
                     case READ_DATA_XLSX:
                         Intent newReadDataFromXLSX = new Intent(HomeActivity.this,ReadXLSActivity.class);
                         startActivity(newReadDataFromXLSX);
+                        break;
+
+                    case BACKGROUND_THREAD_IMAGE_DOWNLOADING:
+                        Intent newImageDownLoadingThread = new Intent(HomeActivity.this,BackgroundProcessActivity.class);
+                        startActivity(newImageDownLoadingThread);
                         break;
                 }
             }
